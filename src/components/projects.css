@@ -1,0 +1,16 @@
+@import '../styledVars.css';
+
+.projectSection {
+  background: url(../img/portfolio_background_image.jpg) no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: var(--main-font-color);
+}
+
+.projectsThumbNail {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px, #333 0 0 0 3px;
+}

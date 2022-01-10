@@ -8,11 +8,7 @@ export default function AboutMe() {
       <div className="card py-5 aboutSection">
         <div className="row">
           <div className="col-md-4 text-center">
-            <img
-              className="imgPortrait img-fluid"
-              src={portrait}
-              alt="Self Portrait"
-            />
+            <img className="imgPortrait" src={portrait} alt="Self Portrait" />
           </div>
           <div className="col-md-8">
             <div className="card-body text-center text-md-start">

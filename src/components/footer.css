@@ -1,14 +1,11 @@
 @import '../styledVars.css';
 
-.jumbotron {
-  height: 100vh;
+footer {
   background-color: var(--xiketic-main-BG);
-}
-
-.jumbotron h1 {
   color: var(--main-font-color);
 }
 
-.jumbotronContents {
-  width: 65%;
+.githubIcon {
+  background-color: #333;
+  margin-left: 1rem;
 }

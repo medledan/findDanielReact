@@ -1,0 +1,9 @@
+:root {
+  /* Color Palette */
+  --xiketic-main-BG: #0f0f0f;
+  --slateGray-accentColor-main: #23282b;
+  --main-font-color: #ffffff;
+
+  /* Typography */
+  --typography: 'Roboto', sans-serif;
+}
