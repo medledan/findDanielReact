@@ -4,6 +4,10 @@
   background-color: var(--slateGray-accentColor-main);
 }
 
+.underline {
+  border-bottom: var(--main-font-color) 5px solid;
+}
+
 .imgLogo {
   max-width: 50%;
   height: auto;

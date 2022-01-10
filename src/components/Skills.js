@@ -25,11 +25,7 @@ export default function Skills() {
           <h2 className="mt-2">LOGIC</h2>
         </div>
         <div className="py-2 col-md-3 text-center">
-          <img
-            className="spinningReactLogo imgLogo"
-            src={reactLogo}
-            alt="React Logo"
-          />
+          <img className="spinningReactLogo imgLogo" src={reactLogo} alt="React Logo" />
           <h2 className="mt-2">REUSABILITY</h2>
         </div>
       </div>
