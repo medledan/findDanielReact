@@ -3,6 +3,8 @@ import './App.css';
 import { Container } from 'react-bootstrap';
 import Header from './components/Header';
 import NavBar from './components/NavBar';
+import AboutMe from './components/AboutMe';
+import Skills from './components/Skills';
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
         <body>
           <Header />
           <NavBar />
+          <AboutMe/>
+          <Skills/>
         </body>
       </Container>
     </div>
