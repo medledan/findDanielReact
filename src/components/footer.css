@@ -1,5 +1,3 @@
-@import '../styledVars.css';
-
 footer {
   background-color: var(--xiketic-main-BG);
   color: var(--main-font-color);

@@ -1,5 +1,3 @@
-@import '../styledVars.css';
-
 .skillsSection {
   background-color: var(--slateGray-accentColor-main);
 }

@@ -26,7 +26,7 @@ export default function Contact() {
       <section
         className="modal fade"
         id="contactMeForm"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="contactMeModal"
         aria-hidden="true"
       >
@@ -88,12 +88,12 @@ export default function Contact() {
               <button
                 type="submit"
                 form="fakeForm"
-                formaction="fakeURL.com"
+                formAction="fakeURL.com"
                 data-bs-dismiss="modal"
                 className="btn btn-lg btn-outline-light btn-danger"
               >
                 SUBMIT
-              </button>
+              </button>``
             </div>
           </div>
         </div>

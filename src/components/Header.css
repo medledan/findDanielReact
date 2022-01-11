@@ -1,5 +1,3 @@
-@import '../styledVars.css';
-
 .jumbotron {
   height: 100vh;
   background-color: var(--xiketic-main-BG);

@@ -1,5 +1,3 @@
-@import '../styledVars.css';
-
 .contactMe {
   background-color: var(--slateGray-accentColor-main);
 }
