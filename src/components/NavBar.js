@@ -1,7 +1,20 @@
 import React from 'react';
 import './navBar.css';
+import NavItems from './NavItems';
 
-export default function NavBar() {
+export default function NavBar(props) {
+  
+  const renderNavItems = (item, index) => {
+    return (
+      <NavItems
+        key={item.title + index}
+        href={item.href}
+        title={item.title}
+        textColor={item.color}
+      />
+    );
+  };
+
   return (
     <nav>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -21,42 +34,7 @@ export default function NavBar() {
             className="collapse navbar-collapse justify-content-center"
             id="navbarNav"
           >
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a
-                  className="nav-link text-danger"
-                  aria-current="page"
-                  href="#header"
-                >
-                  HOME
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-light" href="#about">
-                  ABOUT
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-light" href="#skills">
-                  SKILLS
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-light" href="#projects">
-                  PROJECTS
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  href=""
-                  className="nav-link text-light"
-                  data-bs-toggle="modal"
-                  data-bs-target="#contactMeForm"
-                >
-                  CONTACT
-                </a>
-              </li>
-            </ul>
+            <ul className="navbar-nav">{props.navData.map(renderNavItems)}</ul>
           </div>
         </div>
       </nav>

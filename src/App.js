@@ -5,7 +5,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import LargeButton from './components/LargeButton';
+import navLinks from './data/navLinks'
 import React from 'react';
 
 function App() {
@@ -19,12 +19,12 @@ function App() {
         I'm a {title}.
       </h1>
     );
-  }
+  }  
 
   return (
     <div className="container-fluid">
-      <Header heroTitle={renderHeroHeader()}/>      
-      <NavBar />
+      <Header heroTitle={renderHeroHeader()} />
+      <NavBar navData={navLinks} />
       <AboutMe />
       <Skills />
       <Projects />
