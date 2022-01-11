@@ -17,3 +17,7 @@
   max-width: 50%;
   height: auto;
 }
+
+.underline {
+  border-bottom: var(--main-font-color) 5px solid;
+}

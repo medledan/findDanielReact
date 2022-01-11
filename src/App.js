@@ -5,27 +5,29 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import navLinks from './data/navLinks'
+import navLinks from './data/navLinks';
+import portrait from './img/portrait.jpg';
 import React from 'react';
 
 function App() {
-  function renderHeroHeader() {
-    const name = 'Daniel Medley';
-    const title = 'full-stack web developer';
-
-    return (
-      <h1 className="p-3">
-        Hello, I'm <span className="text-danger">{name}</span>.<br />
-        I'm a {title}.
-      </h1>
-    );
-  }  
+  const aboutMeBodyText = `I am a recent Nucamp Full Stack Web + Mobile Development
+                bootcamp graduate with over 8 years of professional experience
+                as a former Systems Administrator, Network Engineer, and Wi-Fi
+                surveyor and designer.`;
 
   return (
     <div className="container-fluid">
-      <Header heroTitle={renderHeroHeader()} />
+      <Header heroBody={`I'm a full-stack web developer.`} />
       <NavBar navData={navLinks} />
-      <AboutMe />
+      <AboutMe
+        imageSrc={portrait}
+        title={
+          <>
+            A<span className="underline">BOUT</span> ME
+          </>
+        }
+        bodyText={aboutMeBodyText}
+      />
       <Skills />
       <Projects />
       <Contact />
