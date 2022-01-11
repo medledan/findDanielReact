@@ -1,7 +1,8 @@
 import React from 'react';
 import './header.css';
+import LargeButton from './LargeButton';
 
-export default function Header() {
+export default function Header(props) {
   return (
     <header
       id="header"
@@ -14,17 +15,15 @@ export default function Header() {
         "
     >
       <div className="lh-1 jumbotronContents">
-        <h1 className="p-3">
-          Hello, I'm <span className="text-danger">Daniel Medley</span>.<br />
-          I'm a full-stack web developer.
-        </h1>
-        <a
-          role="button"
-          className="btn btn-lg btn-danger btn-outline-light mt-4"
-          href="#projects"
-        >
-          View my work
-        </a>
+        {props.heroTitle}
+        <LargeButton
+          btnText="View My Work"
+          bootStrapBtnColor="btn-danger"
+          bootStrapBtnStyle="btn-outline-light"
+          hrefTarget="#projects"
+          btnSize="btn-lg"
+          btnMargin="mt-4"
+        />
       </div>
     </header>
   );
