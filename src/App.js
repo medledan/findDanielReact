@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import navLinks from './data/navLinks';
+import skills from './data/skills';
 import portrait from './img/portrait.jpg';
 import React from 'react';
 
@@ -28,7 +29,7 @@ function App() {
         }
         bodyText={aboutMeBodyText}
       />
-      <Skills />
+      <Skills skillsData={skills}/>
       <Projects />
       <Contact />
       <Footer />

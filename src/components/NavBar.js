@@ -3,6 +3,8 @@ import './navBar.css';
 import NavItems from './NavItems';
 
 export default function NavBar(props) {
+
+  const {navData} = props
   
   const renderNavItems = (item, index) => {
     return (
@@ -34,7 +36,7 @@ export default function NavBar(props) {
             className="collapse navbar-collapse justify-content-center"
             id="navbarNav"
           >
-            <ul className="navbar-nav">{props.navData.map(renderNavItems)}</ul>
+            <ul className="navbar-nav">{navData.map(renderNavItems)}</ul>
           </div>
         </div>
       </nav>
