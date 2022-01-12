@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css';
-import LargeButton from './LargeButton';
+import LargeButton from '../btns/LargeButton';
 
 export default function Header(props) {
   const { heroBody } = props;

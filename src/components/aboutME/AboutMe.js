@@ -1,6 +1,6 @@
 import React from 'react';
-import './aboutMe.css';
-import LargeButton from './LargeButton';
+import './aboutMe.css'
+import LargeButton from '../btns/LargeButton'
 
 export default function AboutMe(props) {
   const { imageSrc, title, bodyText } = props;

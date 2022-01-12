@@ -1,10 +1,10 @@
-import Header from './components/Header';
-import NavBar from './components/NavBar';
-import AboutMe from './components/AboutMe';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Header from './components/header/Header';
+import NavBar from './components/navBar/NavBar';
+import AboutMe from './components/aboutME/AboutMe';
+import Skills from './components/skills/Skills';
+import Projects from './components/projects/Projects';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 import navLinks from './data/navLinks';
 import skills from './data/skills';
 import portrait from './img/portrait.jpg';
@@ -29,7 +29,7 @@ function App() {
         }
         bodyText={aboutMeBodyText}
       />
-      <Skills skillsData={skills}/>
+      <Skills skillsData={skills} />
       <Projects />
       <Contact />
       <Footer />

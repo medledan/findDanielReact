@@ -93,7 +93,8 @@ export default function Contact() {
                 className="btn btn-lg btn-outline-light btn-danger"
               >
                 SUBMIT
-              </button>``
+              </button>
+              ``
             </div>
           </div>
         </div>
