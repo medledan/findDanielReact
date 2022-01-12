@@ -5,9 +5,10 @@ import Project from './Project';
 import projectData from '../../data/projects';
 
 export default function Projects() {
-  
   const renderProjects = (item, index) => {
-    return <Project id={item.id} image={item.image} alt={item.alt} />;
+    return (
+      <Project data={item} />
+    );
   };
 
   return (

@@ -1,8 +1,9 @@
 import React from 'react';
 import './projectDetailsModal.css';
-import testImage from '../../img/portrait.jpg';
 
-export default function ProjectDetailsModal() {
+export default function ProjectDetailsModal(props) {
+  const { title, image, alt, github, hosted, technology, details } = props;
+
   return (
     <section
       className="modal fade"
@@ -15,7 +16,7 @@ export default function ProjectDetailsModal() {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="projectDetailsModal">
-              PROJECT NAME
+              {title}
             </h5>
             <button
               type="button"
@@ -26,16 +27,23 @@ export default function ProjectDetailsModal() {
           </div>
           <div className="modal-body">
             <div id="projectDetailsCard" className="card">
-              <img src={testImage} class="card-img-top" alt="..." />
+              <img src={image} className="card-img-top" alt={alt} />
               <ul className="list-group list-group-mine list-group-flush">
-                <li className="list-group-item card-body-list">Technology: </li>
-                <li className="list-group-item card-body-list">Details: </li>
+                <li className="list-group-item card-body-list">
+                  Technology: {technology}
+                </li>
+                <li className="list-group-item card-body-list">
+                  Details: {details}
+                </li>
               </ul>
               <div className="card-body">
-                <a href="#" className="card-link">
+                <a href={hosted} className="card-link">
                   Live Project
                 </a>
-                <a href="#" className="card-link">
+                <a
+                  href={github}
+                  className="card-link"
+                >
                   Github
                 </a>
               </div>
