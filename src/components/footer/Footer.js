@@ -1,31 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './footer.css';
+import socialLinksData from '../../data/socialLinks';
+import SocialIcons from './SocialIcons';
 
-export default function Footer() {
+export default function Footer(props) {
+  const { name } = props;
+  const [socialLinks, setSocialLinks] = useState(socialLinksData);
+
+  const today = new Date();
+  const year = today.getFullYear();
+
+  const renderSocialLinks = (item, index) => {
+    return (
+      <SocialIcons
+        key={item.id}
+        styles={item.styles}
+        href={item.href}
+        fontAwesome={item.fontAwesome}
+      />
+    );
+  };
+
   return (
     <footer className="py-4">
       <div className="row">
         <div className="col text-center">
-          <a
-            className="btn btn-lg btn-primary"
-            href="https://www.linkedin.com/in/danielmedleyprofile"
-            target="_blank"
-            role="button"
-          >
-            <i className="fab fa-linkedin-in"></i>
-          </a>
-          <a
-            className="btn btn-lg btn-primary githubIcon"
-            href="https://github.com/medledan"
-            target="_blank"
-            role="button"
-          >
-            <i className="fab fa-github"></i>
-          </a>
+          {socialLinks.map(renderSocialLinks)}
         </div>
       </div>
       <p className="mt-4 text-center">
-        <small>Daniel Medley &copy; 2021</small>
+        <small>
+          {name} &copy; {year}
+        </small>
       </p>
     </footer>
   );

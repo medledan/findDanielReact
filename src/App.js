@@ -32,7 +32,7 @@ function App() {
       <Skills skillsData={skills} />
       <Projects />
       <Contact sectionText={'BACK TO TOP'}/>
-      <Footer />
+      <Footer name={'Daniel Medley'}/>
     </div>
   );
 }
