@@ -5,8 +5,6 @@ import Skills from './components/skills/Skills';
 import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
-import navLinks from './data/navLinks';
-import skills from './data/skills';
 import portrait from './img/portrait.jpg';
 import React from 'react';
 
@@ -19,7 +17,7 @@ function App() {
   return (
     <div className="container-fluid">
       <Header heroBody={`I'm a full-stack web developer.`} />
-      <NavBar navData={navLinks} />
+      <NavBar />
       <AboutMe
         imageSrc={portrait}
         title={
@@ -29,10 +27,10 @@ function App() {
         }
         bodyText={aboutMeBodyText}
       />
-      <Skills skillsData={skills} />
+      <Skills />
       <Projects />
-      <Contact sectionText={'BACK TO TOP'}/>
-      <Footer name={'Daniel Medley'}/>
+      <Contact sectionText={'BACK TO TOP'} />
+      <Footer name={'Daniel Medley'} />
     </div>
   );
 }

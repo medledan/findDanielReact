@@ -1,9 +1,10 @@
 import './skills.css';
-import React from 'react';
+import React, { useState } from 'react';
 import Skill from './Skill';
+import skillsData from '../../data/skills';
 
 export default function Skills(props) {
-  const { skillsData } = props;
+  const [skills, setSkills] = useState(skillsData);
 
   const renderSkillItems = (item, index) => {
     return (
@@ -22,7 +23,7 @@ export default function Skills(props) {
       <h2 className="text-center">
         S<span className="underline">KILL</span>S
       </h2>
-      <div className="row py-4">{skillsData.map(renderSkillItems)}</div>
+      <div className="row py-4">{skills.map(renderSkillItems)}</div>
     </section>
   );
 }

@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './navBar.css';
 import NavItems from './NavItems';
+import navLinksData from '../../data/navLinks';
 
 export default function NavBar(props) {
+  const [navLinks, setNavLinks] = useState(navLinksData);
 
-  const {navData} = props
-  
   const renderNavItems = (item, index) => {
     return (
       <NavItems
@@ -36,7 +36,7 @@ export default function NavBar(props) {
             className="collapse navbar-collapse justify-content-center"
             id="navbarNav"
           >
-            <ul className="navbar-nav">{navData.map(renderNavItems)}</ul>
+            <ul className="navbar-nav">{navLinks.map(renderNavItems)}</ul>
           </div>
         </div>
       </nav>

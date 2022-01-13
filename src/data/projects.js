@@ -28,7 +28,7 @@ const projectData = [
     title: 'Original site version',
     technology: 'HTML, CSS, Bootstrap 5',
     details:
-      'Original version of this website created using html and styled with Bootstrap 5',
+      'Original version of this website created using HTML and styled with Bootstrap 5',
     hosted: 'https://medledan.github.io/findDaniel/',
     github: 'https://github.com/medledan/findDaniel.git',
     collapsed: false,
