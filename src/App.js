@@ -31,7 +31,7 @@ function App() {
       />
       <Skills skillsData={skills} />
       <Projects />
-      <Contact />
+      <Contact sectionText={'BACK TO TOP'}/>
       <Footer />
     </div>
   );

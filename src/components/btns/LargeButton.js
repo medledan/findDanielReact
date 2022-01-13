@@ -8,6 +8,8 @@ export default function LargeButton(props) {
     hrefTarget,
     btnSize,
     btnMargin,
+    dataBsToggle,
+    dataBsTarget,
   } = props;
 
   return (
@@ -16,6 +18,8 @@ export default function LargeButton(props) {
         role="button"
         className={`btn ${btnSize} ${bootStrapBtnColor} ${bootStrapBtnStyle} ${btnMargin}`}
         href={hrefTarget}
+        data-bs-toggle={dataBsToggle}
+        data-bs-target={dataBsTarget}
       >
         {btnText}
       </a>

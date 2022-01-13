@@ -25,7 +25,7 @@ export default function Project(props) {
     >
       <div className="mb-4">
         <img
-          className="img-fluid projectsThumbNail"
+          className="projectsThumbNail"
           src={sitePrevImage}
           alt={alt}
           data-bs-toggle="modal"

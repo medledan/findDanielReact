@@ -1,23 +1,35 @@
 import React from 'react';
 import './contact.css';
+import LargeButton from '../btns/LargeButton';
 
-export default function Contact() {
+export default function Contact(props) {
+  const { sectionText } = props;
+
   return (
     <section id="contact" className="contactMe py-4 text-center">
       <div className="row">
         <div className="col-12">
-          <button
+          {/* <button
             type="button"
             className="btn btn-lg btn-danger btn-outline-light"
             data-bs-toggle="modal"
             data-bs-target="#contactMeForm"
           >
             CONTACT ME
-          </button>
+          </button> */}
+          <LargeButton
+            btnText="CONTACT ME"
+            bootStrapBtnStyle="btn btn-lg btn-danger btn-outline-light"
+            hrefTarget=""
+            btnSize="btn-lg"
+            btnMargin="mt-4"
+            dataBsToggle="modal"
+            dataBsTarget="#contactMeForm"
+          />
         </div>
         <div className="col-12 mt-4">
           <a href="#header" className="to-top">
-            BACK TO TOP
+            {sectionText}
           </a>
         </div>
       </div>
