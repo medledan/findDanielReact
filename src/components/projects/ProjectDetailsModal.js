@@ -2,12 +2,15 @@ import React from 'react';
 import './projectDetailsModal.css';
 
 export default function ProjectDetailsModal(props) {
-  const { title, image, alt, github, hosted, technology, details } = props;
+  const { title, image, alt, github, hosted, technology, details, modalName } =
+    props;
+
+  console.log(modalName);
 
   return (
     <section
       className="modal fade"
-      id="projectDetailsModal"
+      id={modalName}
       tabIndex="-1"
       aria-labelledby="contactMeModal"
       aria-hidden="true"
@@ -15,7 +18,7 @@ export default function ProjectDetailsModal(props) {
       <div className="modal-dialog modal-dialog-centered ">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="projectDetailsModal">
+            <h5 className="modal-title" id={modalName}>
               {title}
             </h5>
             <button
@@ -40,10 +43,7 @@ export default function ProjectDetailsModal(props) {
                 <a href={hosted} className="card-link">
                   Live Project
                 </a>
-                <a
-                  href={github}
-                  className="card-link"
-                >
+                <a href={github} className="card-link">
                   Github
                 </a>
               </div>

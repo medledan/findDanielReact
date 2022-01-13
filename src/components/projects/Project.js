@@ -2,8 +2,18 @@ import React from 'react';
 import ProjectDetailsModal from './ProjectDetailsModal';
 
 export default function Project(props) {
-  const { targetId, image, alt, title, github, hosted, technology, details } =
-    props.data;
+  const {
+    id,
+    targetId,
+    modalName,
+    image,
+    alt,
+    title,
+    github,
+    hosted,
+    technology,
+    details,
+  } = props; 
 
   return (
     <div id={targetId} className="row mt-4 justify-content-center">
@@ -13,18 +23,19 @@ export default function Project(props) {
           src={image}
           alt={alt}
           data-bs-toggle="modal"
-          data-bs-target="#projectDetailsModal"
-        />
-        <ProjectDetailsModal
-          title={title}
-          image={image}
-          alt={alt}
-          github={github}
-          hosted={hosted}
-          technology={technology}
-          details={details}
+          data-bs-target={`#${modalName}`}
         />
       </div>
+      <ProjectDetailsModal
+        modalName={modalName}
+        title={title}
+        image={image}
+        alt={alt}
+        github={github}
+        hosted={hosted}
+        technology={technology}
+        details={details}
+      />
     </div>
   );
 }
