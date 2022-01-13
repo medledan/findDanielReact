@@ -5,8 +5,6 @@ export default function ProjectDetailsModal(props) {
   const { title, image, alt, github, hosted, technology, details, modalName } =
     props;
 
-  console.log(modalName);
-
   return (
     <section
       className="modal fade"
@@ -30,7 +28,11 @@ export default function ProjectDetailsModal(props) {
           </div>
           <div className="modal-body">
             <div id="projectDetailsCard" className="card">
-              <img src={image} className="card-img-top" alt={alt} />
+              <img
+                src={image}
+                className="card-img-top img-thumbnail"
+                alt={alt}
+              />
               <ul className="list-group list-group-mine list-group-flush">
                 <li className="list-group-item card-body-list">
                   Technology: {technology}

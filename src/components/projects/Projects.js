@@ -8,8 +8,6 @@ import projectDataArray from '../../data/projects';
 export default function Projects() {
   const [projectData, setProjectData] = useState(projectDataArray);
 
-  console.log(projectData);
-
   const renderProjects = (item, index) => {
     return (
       <Project
@@ -30,14 +28,12 @@ export default function Projects() {
   };
 
   return (
-    <div>
-      <section id="projects" className="projectSection p-4">
-        <h2 className="text-center pt-4">
-          P<span className="underline">ROJECT</span>S
-        </h2>
-        <ProjectToggler />
-        {projectData.map(renderProjects)}
-      </section>
-    </div>
+    <section id="projects" className="projectSection p-4">
+      <h2 className="text-center pt-4">
+        P<span className="underline">ROJECT</span>S
+      </h2>
+      <ProjectToggler />
+      <div className="row">{projectData.map(renderProjects)}</div>
+    </section>
   );
 }
