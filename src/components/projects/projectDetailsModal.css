@@ -1,12 +1,12 @@
 #projectDetailsCard {
-  background-color: black;
+  background-color: var(--xiketic-main-BG);
 }
 
 .list-group-mine .list-group-item {
-  background-color: black;
-  color: white
+  background-color: var(--xiketic-main-BG);
+  color: var(--main-font-color);
 }
 
-.card-link{
-    text-decoration: none;
+.card-link {
+  text-decoration: none;
 }

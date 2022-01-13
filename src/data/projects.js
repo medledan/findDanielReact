@@ -1,11 +1,14 @@
 import bootstrapPortfolioSiteImg from '../img/bootstrap_portfolio_site.png';
+import bootstrapPortfolioSitePrev from '../img/bootstrap_preview.png';
 import tinDogSiteImg from '../img/tinDog_siteImg.png';
+import tinDogSitePreviewImg from '../img/tinDog_preview.png';
 import { nanoid } from 'nanoid';
 
 // nanoid(), --Random ID generated via lib
 // modalName: 'test1', -- Needed to create a new modal instance
 // targetId: 'HTML_CSS',  -- used collapse/show project via toggle buttons(use button name)
-// image: bootstrapPortfolioSiteImg, -- location of project image
+// sitePrevImage: bootstrapPortfolioSiteImg, -- location of project preview image
+// modalImage: bootstrapPortfolioSiteImg, -- location of project snapshot image
 // alt: 'Bootstrap portfolio site render', --image alt tag
 // title: 'Bootstrap portfolio',  -- Modal- project title
 // technology: 'HTML, CSS, Bootstrap 5', --Modal- technology used in project
@@ -19,7 +22,8 @@ const projectData = [
     id: nanoid(),
     modalName: 'originalPortfolio',
     targetId: 'HTML_CSS',
-    image: bootstrapPortfolioSiteImg,
+    sitePrevImage: bootstrapPortfolioSitePrev,
+    modalImage: bootstrapPortfolioSiteImg,
     alt: 'Bootstrap portfolio site render',
     title: 'Original site version',
     technology: 'HTML, CSS, Bootstrap 5',
@@ -33,7 +37,8 @@ const projectData = [
     id: nanoid(),
     modalName: 'TinDog',
     targetId: 'HTML_CSS',
-    image: tinDogSiteImg,
+    sitePrevImage: tinDogSitePreviewImg,
+    modalImage: tinDogSiteImg,
     alt: 'Tindog site render',
     title: 'TinDog',
     technology: 'HTML, CSS, Bootstrap 5',
@@ -46,7 +51,8 @@ const projectData = [
     id: nanoid(),
     modalName: 'test2',
     targetId: 'React',
-    image: 'https://picsum.photos/id/1004/500',
+    sitePrevImage: bootstrapPortfolioSiteImg,
+    modalImage: bootstrapPortfolioSiteImg,
     alt: 'sample project',
     title: 'test',
     technology: '',
@@ -59,7 +65,8 @@ const projectData = [
     id: nanoid(),
     targetId: 'Node',
     modalName: 'test3',
-    image: 'https://picsum.photos/id/1005/500',
+    sitePrevImage: bootstrapPortfolioSiteImg,
+    modalImage: bootstrapPortfolioSiteImg,
     alt: 'sample project',
     title: 'test',
     technology: '',

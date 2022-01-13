@@ -1,12 +1,11 @@
 import React from 'react';
 import ProjectDetailsModal from './ProjectDetailsModal';
-import ProjectToggler from './ProjectToggler';
 
 export default function Project(props) {
   const {
     targetId,
     modalName,
-    image,
+    sitePrevImage,
     alt,
     collapsed,
     title,
@@ -14,6 +13,7 @@ export default function Project(props) {
     hosted,
     technology,
     details,
+    modalImage,
   } = props;
 
   return (
@@ -26,7 +26,7 @@ export default function Project(props) {
       <div className="mb-4">
         <img
           className="img-fluid projectsThumbNail"
-          src={image}
+          src={sitePrevImage}
           alt={alt}
           data-bs-toggle="modal"
           data-bs-target={`#${modalName}`}
@@ -35,7 +35,7 @@ export default function Project(props) {
       <ProjectDetailsModal
         modalName={modalName}
         title={title}
-        image={image}
+        modalImage={modalImage}
         alt={alt}
         github={github}
         hosted={hosted}

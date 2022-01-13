@@ -2,8 +2,16 @@ import React from 'react';
 import './projectDetailsModal.css';
 
 export default function ProjectDetailsModal(props) {
-  const { title, image, alt, github, hosted, technology, details, modalName } =
-    props;
+  const {
+    title,
+    modalImage,
+    alt,
+    github,
+    hosted,
+    technology,
+    details,
+    modalName,
+  } = props;
 
   return (
     <section
@@ -29,7 +37,7 @@ export default function ProjectDetailsModal(props) {
           <div className="modal-body">
             <div id="projectDetailsCard" className="card">
               <img
-                src={image}
+                src={modalImage}
                 className="card-img-top img-thumbnail"
                 alt={alt}
               />

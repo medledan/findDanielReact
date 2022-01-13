@@ -15,7 +15,8 @@ export default function Projects() {
         key={nanoid()}
         modalName={item.modalName}
         targetId={item.targetId}
-        image={item.image}
+        sitePrevImage={item.sitePrevImage}
+        modalImage={item.modalImage}        
         alt={item.alt}
         title={item.title}
         github={item.github}
