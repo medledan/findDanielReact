@@ -2,6 +2,8 @@ import bootstrapPortfolioSiteImg from '../img/bootstrap_portfolio_site.png';
 import bootstrapPortfolioSitePrev from '../img/bootstrap_preview.png';
 import tinDogSiteImg from '../img/tinDog_siteImg.png';
 import tinDogSitePreviewImg from '../img/tinDog_preview.png';
+import orderSummaryComponent from '../img/orderSummaryComponent.png';
+
 import { nanoid } from 'nanoid';
 
 // nanoid(), --Random ID generated via lib
@@ -42,23 +44,24 @@ const projectData = [
     alt: 'Tindog site render',
     title: 'TinDog',
     technology: 'HTML, CSS, Bootstrap 5',
-    details: 'Project website created using html and styled with Bootstrap 5',
+    details: 'Project website created using HTML and styled with Bootstrap',
     hosted: 'https://medledan.github.io/Tindog/',
     github: 'https://github.com/medledan/Tindog.git',
     collapsed: true,
   },
   {
     id: nanoid(),
-    modalName: 'test2',
-    targetId: 'React',
-    sitePrevImage: bootstrapPortfolioSiteImg,
-    modalImage: bootstrapPortfolioSiteImg,
-    alt: 'sample project',
-    title: 'test',
-    technology: '',
-    details: '',
-    hosted: '',
-    github: '',
+    modalName: 'OrderSummaryCardComponent',
+    targetId: 'HTML_CSS',
+    sitePrevImage: orderSummaryComponent,
+    modalImage: orderSummaryComponent,
+    alt: 'Order Summary Card Component',
+    title: 'Order Summary Card Component',
+    technology: 'HTML5, Bootstrap 5',
+    details: 'This is a component built with HTML, Bootstrap and custom CSS',
+    hosted: 'https://medledan.github.io/Frontend_Mentor-Order-Summary-Card-/',
+    github:
+      'https://github.com/medledan/Frontend_Mentor-Order-Summary-Card-.git',
     collapsed: true,
   },
   {

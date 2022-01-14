@@ -19,19 +19,17 @@ export default function Project(props) {
   return (
     <div
       id={targetId}
-      className={`col-sm-12 col-md-4 mt-4 justify-content-center ${
+      className={`col-sm-12 col-md-4 mt-4 justify-content-center${
         collapsed && 'collapse'
       }`}
     >
-      <div className="mb-4">
-        <img
-          className="projectsThumbNail"
-          src={sitePrevImage}
-          alt={alt}
-          data-bs-toggle="modal"
-          data-bs-target={`#${modalName}`}
-        />
-      </div>
+      <img
+        className="projectsThumbNail testSize"
+        src={sitePrevImage}
+        alt={alt}
+        data-bs-toggle="modal"
+        data-bs-target={`#${modalName}`}
+      />
       <ProjectDetailsModal
         modalName={modalName}
         title={title}

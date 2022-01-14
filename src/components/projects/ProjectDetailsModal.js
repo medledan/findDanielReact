@@ -50,10 +50,20 @@ export default function ProjectDetailsModal(props) {
                 </li>
               </ul>
               <div className="card-body">
-                <a href={hosted} className="card-link">
+                <a
+                  href={hosted}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="card-link"
+                >
                   Live Project
                 </a>
-                <a href={github} className="card-link">
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="card-link"
+                >
                   Github
                 </a>
               </div>
