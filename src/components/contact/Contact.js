@@ -1,22 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './contact.css';
 import LargeButton from '../btns/LargeButton';
 
 export default function Contact(props) {
   const { sectionText } = props;
 
+  const [formData, setFormData] = useState({
+    name: '',
+  });
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    console.log(name);
+    setFormData(prevFormData => {
+      return {
+        ...prevFormData,
+        [name]: value,
+      };
+    });
+  }
+
+  const handleSubmit = e => {
+    console.log('submitted');
+    e.preventDefault();
+  };
+
   return (
     <section id="contact" className="contactMe py-4 text-center">
       <div className="row">
         <div className="col-12">
-          {/* <button
-            type="button"
-            className="btn btn-lg btn-danger btn-outline-light"
-            data-bs-toggle="modal"
-            data-bs-target="#contactMeForm"
-          >
-            CONTACT ME
-          </button> */}
           <LargeButton
             btnText="CONTACT ME"
             bootStrapBtnStyle="btn btn-lg btn-danger btn-outline-light"
@@ -24,7 +36,7 @@ export default function Contact(props) {
             btnSize="btn-lg"
             btnMargin="mt-4"
             dataBsToggle="modal"
-            dataBsTarget="#contactMeForm"
+            dataBsTarget="#contactMeFormModal"
           />
         </div>
         <div className="col-12 mt-4">
@@ -37,7 +49,7 @@ export default function Contact(props) {
       {/* <!-- Modal --> */}
       <section
         className="modal fade"
-        id="contactMeForm"
+        id="contactMeFormModal"
         tabIndex="-1"
         aria-labelledby="contactMeModal"
         aria-hidden="true"
@@ -56,7 +68,12 @@ export default function Contact(props) {
               ></button>
             </div>
             <div className="modal-body">
-              <form className="container-fluid">
+              <form
+                method="POST"
+                action="https://docs.google.com/forms/d/1twHGZ4cDDDjFD68D8kKVU0gxhWV8t_OlBgf6oiOj_GU/formResponse"
+                className="container-fluid"
+                id="contactForm"
+              >
                 <div className="row mb-4">
                   <div className="col-sm-12 col-md-6 inputField form-group">
                     <input
@@ -64,7 +81,9 @@ export default function Contact(props) {
                       className="form-control mt-2"
                       id="name"
                       placeholder="Enter name"
-                      name="name"
+                      name="entry.1190652405"
+                      value={formData.name.entry}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="col-sm-12 col-md-6">
@@ -73,7 +92,9 @@ export default function Contact(props) {
                       className="form-control mt-2"
                       id="email"
                       placeholder="Enter email"
-                      name="email"
+                      name="entry.1984352103"
+                      value={formData.name.entry}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -84,6 +105,9 @@ export default function Contact(props) {
                       id="textArea"
                       rows="3"
                       placeholder="Message Me"
+                      name="entry.1055495654"
+                      value={formData.name.entry}
+                      onChange={handleChange}
                     ></textarea>
                   </div>
                 </div>
@@ -99,14 +123,13 @@ export default function Contact(props) {
               </button>
               <button
                 type="submit"
-                form="fakeForm"
-                formAction="fakeURL.com"
+                form="contactForm"
                 data-bs-dismiss="modal"
                 className="btn btn-lg btn-outline-light btn-danger"
+                onSubmit={handleSubmit}
               >
                 SUBMIT
               </button>
-              ``
             </div>
           </div>
         </div>
