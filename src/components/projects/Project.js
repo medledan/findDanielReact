@@ -24,7 +24,7 @@ export default function Project(props) {
       }`}
     >
       <img
-        className="projectsThumbNail testSize"
+        className="projectImgThumbNail"
         src={sitePrevImage}
         alt={alt}
         data-bs-toggle="modal"

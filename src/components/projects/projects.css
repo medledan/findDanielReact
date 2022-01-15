@@ -8,17 +8,10 @@
   color: var(--main-font-color);
 }
 
-/* ../img/portfolio_background_image.jpg */
-
-.projectsThumbNail {
+.projectImgThumbNail {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px, #333 0 0 0 3px;
-  max-width: 100%;
-  height: auto;
-}
-
-.testSize {
+  height: 100%;
   width: 100%;
-  height: 75%;
-  object-fit: fit;
+  object-fit: cover;
 }

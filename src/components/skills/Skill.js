@@ -6,7 +6,9 @@ export default function Skill(props) {
   return (
     <div className="py-2 col-md-3 text-center col-sm-6">
       <img
-        className={!spinning ? 'imgLogo' : 'imgLogo spinningReactLogo'}
+        className={
+          !spinning ? 'imgLogo' : 'imgLogo spinningReactLogo'
+        }
         src={image}
         alt={alt}
       />
